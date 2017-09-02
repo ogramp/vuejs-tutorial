@@ -1,21 +1,14 @@
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <ninjas></ninjas>
-  </div>
+  <ul>
+    <li v-for="ninja in ninjas">{{ ninja }}</li>
+  </ul>
 </template>
 
 <script>
-// Registering component locally.
-import Ninjas from './Ninjas.vue'
-
 export default {
-  components: {
-    'ninjas': Ninjas
-  },
   data () {
     return {
-      title: 'Ninja App',
+      ninjas: ['Yoshi', 'Mario', 'Ryu']
     }
   }
 }
