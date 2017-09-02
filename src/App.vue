@@ -1,32 +1,32 @@
 <template>
-  <div>
-    <h1>{{ title }}</h1>
-    <ninjas></ninjas>
-  </div>
+	<div>
+		<app-header></app-header>
+		<app-ninjas></app-ninjas>
+		<app-footer></app-footer>
+	</div>
 </template>
 
 <script>
-// Registering component locally.
-import Ninjas from './Ninjas.vue'
+// Import the component.
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import Ninjas from './components/Ninjas.vue';
 
 export default {
-  components: {
-    'ninjas': Ninjas
-  },
-  data () {
-    return {
-      title: 'Ninja App',
-    }
-  }
+	// Register the component locally.
+	components: {
+		'app-header': Header,
+		'app-footer': Footer,
+		'app-ninjas': Ninjas
+	},
+	data () {
+		return {
+
+		}
+	}
 }
 </script>
 
-<style>
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+<style >
 
 </style>
