@@ -1,7 +1,10 @@
 <template>
-  <ul>
-    <li v-for="ninja in ninjas">{{ ninja }}</li>
-  </ul>
+  <div>
+    <h1>List of ninjas</h1>
+    <ul>
+      <li v-for="ninja in ninjas">{{ ninja }}</li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -14,12 +17,10 @@ export default {
 }
 </script>
 
-<style>
-body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+<style scoped>
+
+h1 {
+  color: green;
 }
 
 </style>
