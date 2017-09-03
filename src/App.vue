@@ -1,27 +1,26 @@
 <template>
 	<div>
-		<keep-alive>
-			<component v-bind:is="component"></component>
-		</keep-alive>
-		<button v-on:click="component='form-one'">Show form one</button>
-		<button v-on:click="component='form-two'">Show form two</button>
+		<app-header></app-header>
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	// Import the components.
-	import formOne from './components/formOne.vue';
-	import formTwo from './components/formTwo.vue';
+import addBlog from './components/addBlog.vue';
+import showBlogs from './components/showBlogs.vue';
+import listBlogs from './components/listBlogs.vue';
+import header from './components/header.vue';
 
 	export default {
-		// Register the component locally.
 		components: {
-			'form-one': formOne,
-			'form-two': formTwo
+			'add-blog': addBlog,
+			'show-blog': showBlogs,
+			'list-blog': listBlogs,
+			'app-header': header
 		},
 		data () {
 			return {
-				component: 'form-one'
+				
 			}
 		},
 		methods: {
@@ -31,5 +30,7 @@
 </script>
 
 <style >
-
+body {
+	margin: 0;
+}
 </style>
